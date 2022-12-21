@@ -5,6 +5,8 @@ import Register from "./pages/register/Register";
 import Settings from "./pages/settings/Settings";
 import Single from "./pages/single/Single";
 import Write from "./pages/write/Write";
+import About from "./pages/about/About";
+import Contact from "./pages/contact/Contact";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "./context/Context";
@@ -20,6 +22,13 @@ function App() {
       <Routes>
         <Route path="/register" element={user ? <Home /> : <Register />} />
       </Routes>
+      <Routes>
+        <Route path="/about" element={<About />} />
+      </Routes>
+      <Routes>
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+
       <Routes>
         <Route path="/login" element={user ? <Home /> : <Login />} />
       </Routes>

@@ -5,7 +5,6 @@ const Post = require("../models/Post");
 const { json } = require("express");
 
 //UPDATE
-
 router.put("/:id", async (req, res) => {
   if (req.body.userId === req.params.id) {
     if (req.body.password) {
@@ -13,9 +12,13 @@ router.put("/:id", async (req, res) => {
       req.body.password = await bcrypt.hash(req.body.password, salt);
     }
     try {
-      const updatedUser = await User.findByIdAndUpdate(req.params.id, {
-        $set: req.body,
-      });
+      const updatedUser = await User.findByIdAndUpdate(
+        req.params.id,
+        {
+          $set: req.body,
+        },
+        { new: true }
+      );
 
       res.status(200).json(updatedUser);
     } catch (err) {
@@ -27,7 +30,6 @@ router.put("/:id", async (req, res) => {
 });
 
 //DELETE
-
 router.delete("/:id", async (req, res) => {
   if (req.body.userId === req.params.id) {
     try {

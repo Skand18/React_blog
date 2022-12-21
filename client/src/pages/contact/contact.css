@@ -1,0 +1,58 @@
+.contactImage > img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.contactContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+h1 {
+  color: rgb(95, 95, 95);
+}
+
+.findUs {
+  padding: 70px 70px;
+  font-size: larger;
+}
+
+.findUs > h1 {
+  margin-bottom: 70px;
+}
+
+.detailForm {
+  width: 400px;
+  padding: 70px;
+}
+
+.detailForm > h1 {
+  margin-bottom: 20px;
+}
+
+.detailForm .formElement input {
+  width: 70%;
+  padding: 10px 0;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.detailForm .formElement label {
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+button {
+  margin: 30px 100px;
+  width: 90px;
+  height: 30px;
+  color: white;
+}
+.btn {
+  background-color: rgb(95, 95, 95);
+  border: none;
+  border-radius: 6px;
+}

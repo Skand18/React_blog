@@ -1,0 +1,23 @@
+.aboutTitle {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  color: rgb(95, 95, 95);
+}
+
+.aboutImage > img {
+  width: 650px;
+  margin-left: 100px;
+}
+
+.aboutItems {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+.aboutContent {
+  padding: 26px 50px;
+  text-align: justify;
+  line-height: 1.5em;
+}

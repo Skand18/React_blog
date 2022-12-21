@@ -14,11 +14,16 @@
   flex-direction: column;
   align-items: center;
 }
+.img {
+  margin-top: 15px;
+  width: 280px;
+  height: 270px;
+}
 
 .sidebarTitle {
   margin: 10px;
-  width: 80%;
   padding: 5px;
+  width: 80%;
   border-top: 1px solid #a7a4a4;
   border-bottom: 1px solid #a7a4a4;
   font-family: "Varela Round", sans-serif;
@@ -29,13 +34,11 @@
   text-align: center;
 }
 
-.img {
+.sidebarItem > img {
   margin-top: 15px;
-  width: 280px;
-  height: 270px;
 }
 
-.sidebarTitle > p {
+.sidebarItem > p {
   padding: 30px;
 }
 
@@ -44,7 +47,7 @@
   margin-bottom: 30px;
 }
 
-.sidebarListItems {
+.sidebarListItem {
   display: inline-block;
   width: 50%;
   margin-top: 15px;
@@ -53,6 +56,7 @@
 
 .sidebarSocial {
   margin-top: 15px;
+  width: 250px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -29,6 +29,7 @@ export default function Sidebar() {
           non sequi totam ex illo blanditiis aliquam consectetur odit facere
         </p>
       </div>
+
       <div className="sidebarItem">
         <span className="sidebarTitle">CATEGORIES</span>
         <ul className="sidebarList">
