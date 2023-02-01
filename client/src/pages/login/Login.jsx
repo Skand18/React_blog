@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "../../context/Context";
 import "./login.css";
 import { Link } from "react-router-dom";
@@ -9,6 +9,7 @@ export default function Login() {
   const userRef = useRef();
   const passwordRef = useRef();
   const { dispatch, isFetching } = useContext(Context);
+  const [error, setError] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
@@ -21,6 +22,7 @@ export default function Login() {
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
     } catch (err) {
       dispatch({ type: "LOGIN_FALIURE" });
+      setError(true);
     }
   };
 
@@ -52,6 +54,11 @@ export default function Login() {
           Register
         </Link>
       </button>
+      {error && (
+        <span style={{ color: "red", marginTop: "10px" }}>
+          Something Went Wrong
+        </span>
+      )}
     </div>
   );
 }

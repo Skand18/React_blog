@@ -63,7 +63,7 @@ export default function Register() {
       </button>
       {error && (
         <span style={{ color: "red", marginTop: "10px" }}>
-          Something went wrong
+          Invalid Credentials
         </span>
       )}
     </div>
